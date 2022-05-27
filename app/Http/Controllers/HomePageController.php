@@ -14,6 +14,8 @@ class HomePageController extends Controller
      */
     public function showHomePage() : Response
     {
-        return Inertia::render('Home');
+        return Inertia::render('Home', [
+            'name' => 'Tendai'
+        ]);
     }
 }

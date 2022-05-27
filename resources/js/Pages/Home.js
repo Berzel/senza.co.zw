@@ -1,6 +1,5 @@
-import React from "react"
-import { Head, Link } from '@inertiajs/inertia-react'
-import { Button } from "@mui/material"
+import { Head } from "@inertiajs/inertia-react"
+import NavBar from "../Components/NavBar"
 
 export default function Home(props) {
     return (
@@ -9,22 +8,18 @@ export default function Home(props) {
                 <meta name="description" content="Senza homepage" />
             </Head>
 
-            <div className="container">
-                <nav className="space-x-4 mt-2">
-                    <Link href={route('home')}>
-                        Home
-                    </Link>
+            <div className="bg-gray-50 min-h-screen">
+                <header className="relative z-10">
+                    <NavBar />
+                </header>
 
-                    <Link href={route('about')}>
-                        About Us
-                    </Link>
+                <main>
 
-                    <Button variant="contained">Click Me</Button>
-                </nav>
+                </main>
 
-                <div>
-                    <h1 className="mt-4 font-semibold">Homepage</h1>
-                </div>
+                <footer>
+
+                </footer>
             </div>
         </>
     )
