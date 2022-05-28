@@ -1,4 +1,5 @@
 import { Head } from "@inertiajs/inertia-react"
+import Hero from "../Components/Hero"
 import NavBar from "../Components/NavBar"
 
 export default function Home(props) {
@@ -11,6 +12,7 @@ export default function Home(props) {
             <div className="bg-gray-50 min-h-screen">
                 <header className="relative z-10">
                     <NavBar />
+                    <Hero />
                 </header>
 
                 <main>

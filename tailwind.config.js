@@ -20,6 +20,7 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                radio: ['Radio Canada', ...defaultTheme.fontFamily.serif]
             },
         },
     },
