@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\AboutPageController;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\JobsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('about-us', [AboutPageController::class, 'showAboutPage'])
-    ->name('about');
+Route::get('/jobs', [JobsController::class, 'showAll'])
+    ->name('jobs.index');
 
 Route::get('/', [HomePageController::class, 'showHomePage'])
     ->name('home');

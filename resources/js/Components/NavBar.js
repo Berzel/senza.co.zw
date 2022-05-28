@@ -7,7 +7,7 @@ import SideMenu from "./SideMenu";
 
 export default function NavBar(props) {
     return (
-        <nav className="bg-white md:bg-transparent shadow-xl md:shadow-none px-3 py-1 md:py-4 flex justify-between md:container">
+        <nav className="bg-white md:bg-transparent px-3 py-1 md:py-4 flex justify-between md:container">
             <div className="flex items-center">
                 <SideMenu />
                 <Logo />

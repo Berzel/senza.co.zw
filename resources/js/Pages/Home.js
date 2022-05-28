@@ -1,28 +1,19 @@
 import { Head } from "@inertiajs/inertia-react"
 import Hero from "../Components/Hero"
-import NavBar from "../Components/NavBar"
+import AppLayout from "../Layouts/AppLayout"
 
 export default function Home(props) {
     return (
-        <>
+        <AppLayout>
             <Head title="Homepage">
                 <meta name="description" content="Senza homepage" />
             </Head>
 
-            <div className="bg-gray-50 min-h-screen">
-                <header className="relative z-10">
-                    <NavBar />
-                    <Hero />
-                </header>
+            <Hero />
 
-                <main>
-
-                </main>
-
-                <footer>
-
-                </footer>
-            </div>
-        </>
+            <main>
+                Other Home Content
+            </main>
+        </AppLayout>
     )
 }
