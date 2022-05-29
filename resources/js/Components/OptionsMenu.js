@@ -38,7 +38,7 @@ export default function OptionsMenu(props) {
                     {
                         dropDownLinks.map(link => (
                             <li key={link.title}>
-                                <Link href={link.href} className="block py-2 px-6 min-w-[8rem] text-left whitespace-nowrap hover:bg-sky-50 hover:bg-opacity-70 hover:text-sky-600 hover:backdrop-blur-sm">
+                                <Link href={link.href} className="block py-2 px-6 min-w-[8rem] text-left text-sky-600 hover:text-pink-600 whitespace-nowrap hover:bg-pink-100 hover:bg-opacity-70 hover:backdrop-blur-sm">
                                     {link.title}
                                 </Link>
                             </li>

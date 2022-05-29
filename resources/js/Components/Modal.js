@@ -1,5 +1,6 @@
-import { ClickAwayListener, Portal } from "@mui/base";
-import { Fragment, useEffect } from "react";
+import { useEffect } from "react";
+import ClickAwayListener from "@mui/base/ClickAwayListener";
+import Portal from "@mui/base/Portal";
 
 export default function Modal({title, close, children}) {
 
