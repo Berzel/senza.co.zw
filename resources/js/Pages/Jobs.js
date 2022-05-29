@@ -1,11 +1,13 @@
 import { Head, Link } from "@inertiajs/inertia-react";
 import BackIcon from "../Components/BackIcon";
 import Filter from "../Components/Filter";
+import FilterIcon from "../Components/FilterIcon";
 import PlusIcon from "../Components/PlusIcon";
 import Sort from "../Components/Sort";
+import SortIcon from "../Components/SortIcon";
 import AppLayout from "../Layouts/AppLayout";
 
-function BreadCrumbs(props) {
+function PageTitle(props) {
     return (
         <div className="bg-sky-600 text-white">
             <div className="px-3 md:container flex justify-between items-center">
@@ -40,7 +42,7 @@ function MobileCategoryList(props) {
     ]
 
     return (
-        <ul className="px-3 py-6 md:container space-y-3 overflow-auto lg:hidden">
+        <ul className="px-3 py-6 md:container space-y-3 overflow-auto">
             { categoryRows && categoryRows.map((row, i) => (
                 <li key={i}>
                     <ul className="flex items-center space-x-2">
@@ -60,7 +62,7 @@ function MobileCategoryList(props) {
 
 function DesktopCategoryList (props) {
     return (
-        <ul className="px-3 container py-6 space-y-3 hidden lg:block">
+        <ul className="px-3 container py-6 space-y-3">
             <li>
                 <ul className="flex justify-between">
                     <li className="w-[24%]">
@@ -169,8 +171,12 @@ function DesktopCategoryList (props) {
 function CategoryList(props) {
     return (
         <>
-            <MobileCategoryList />
-            <DesktopCategoryList />
+            <div className="lg:hidden">
+                <MobileCategoryList />
+            </div>
+            <div className="hidden lg:block">
+                <DesktopCategoryList />
+            </div>
         </>
     )
 }
@@ -183,8 +189,105 @@ export default function Jobs(props) {
             </Head>
 
             <main>
-                <BreadCrumbs />
+                <PageTitle />
                 <CategoryList />
+
+                <section className="mt-2">
+                    <div className="bg-white md:bg-transparent px-3 md:container">
+                        <div className="flex justify-between items-center py-3 md:py-2 md:bg-pink-100 md:bg-opacity-50 md:backdrop-blur-sm md:rounded-full md:pl-4 md:pr-3 md:text-pink-600">
+                            <h2 className="font-semibold font-radio">
+                                Recent jobs feed
+                            </h2>
+                            <div className="flex items-center">
+                                <button className="hidden md:flex items-center justify-center h-10 w-10 rounded-full">
+                                    <SortIcon className="h-5 w-5 fill-current" />
+                                </button>
+                                <button className="hidden md:flex items-center justify-center h-10 w-10 rounded-full">
+                                    <FilterIcon className="h-5 w-5" />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="md:container lg:flex lg:justify-between md:mt-4">
+                        <div className="hidden lg:block lg:w-[25%] bg-white rounded-2xl p-3">
+                            Left
+                        </div>
+                        <ul className="md:space-y-4 lg:w-[74%]">
+                            <li>
+                                <Link href="#" className="px-3 py-4 flex space-x-3 md:bg-white md:rounded-2xl md:hover:shadow-lg">
+                                    <div className="rounded-xl h-12 w-12 bg-pink-600">
+
+                                    </div>
+                                    <div>
+                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <p className="text-sky-600">Webdev Online Solutions</p>
+                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#" className="px-3 py-4 flex space-x-3 bg-gray-100 md:bg-white md:rounded-2xl md:hover:shadow-lg">
+                                    <div className="rounded-xl h-12 w-12 bg-pink-600">
+
+                                    </div>
+                                    <div>
+                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <p className="text-sky-600">Webdev Online Solutions</p>
+                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#" className="px-3 py-4 flex space-x-3 md:bg-white md:rounded-2xl md:hover:shadow-lg">
+                                    <div className="rounded-xl h-12 w-12 bg-pink-600">
+
+                                    </div>
+                                    <div>
+                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <p className="text-sky-600">Webdev Online Solutions</p>
+                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#" className="px-3 py-4 flex space-x-3 bg-gray-100 md:bg-white md:rounded-2xl md:hover:shadow-lg">
+                                    <div className="rounded-xl h-12 w-12 bg-pink-600">
+
+                                    </div>
+                                    <div>
+                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <p className="text-sky-600">Webdev Online Solutions</p>
+                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#" className="px-3 py-4 flex space-x-3 md:bg-white md:rounded-2xl md:hover:shadow-lg">
+                                    <div className="rounded-xl h-12 w-12 bg-pink-600">
+
+                                    </div>
+                                    <div>
+                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <p className="text-sky-600">Webdev Online Solutions</p>
+                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                    </div>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="#" className="px-3 py-4 flex space-x-3 bg-gray-100 md:bg-white md:rounded-2xl md:hover:shadow-lg">
+                                    <div className="rounded-xl h-12 w-12 bg-pink-600">
+
+                                    </div>
+                                    <div>
+                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <p className="text-sky-600">Webdev Online Solutions</p>
+                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                    </div>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
             </main>
         </AppLayout>
     )

@@ -12,7 +12,7 @@ export default function Home(props) {
             <Hero />
 
             <main>
-                Other Home Content
+
             </main>
         </AppLayout>
     )
