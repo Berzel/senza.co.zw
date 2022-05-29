@@ -12,7 +12,7 @@ export default function Hero (props) {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nulla amet debitis enim tempora error corrupti aspernatur placeat qui necessitatibus.
             </p>
             <div className="mt-8 lg:mt-12 flex items-center space-x-4">
-                <Link href="#" className="font-semibold bg-gradient-to-r from-pink-500 to-pink-600 inline-block px-6 lg:px-8 py-3 lg:py-4 rounded-r-full rounded-l-full shadow-xl shadow-pink-100 md:shadow-pink-200 text-white">
+                <Link href={route('jobs.create')} className="font-semibold bg-gradient-to-r from-pink-500 to-pink-600 inline-block px-6 lg:px-8 py-3 lg:py-4 rounded-r-full rounded-l-full shadow-xl shadow-pink-100 md:shadow-pink-200 text-white">
                     Post a job
                 </Link>
                 <Link href={route("jobs.index")} className="flex items-center space-x-2">

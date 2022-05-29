@@ -16,4 +16,14 @@ class JobsController extends Controller
     {
         return Inertia::render('Jobs');
     }
+
+    /**
+     * Show the form to create a new job
+     *
+     * @return \Inertia\Response
+     */
+    public function create() : Response
+    {
+        return Inertia::render('Jobs/NewJob');
+    }
 }

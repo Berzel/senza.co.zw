@@ -34,7 +34,7 @@ export default function OptionsMenu(props) {
                         <path strokeLinecap="round" strokeLinejoin="round" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0zm6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                 </button>
-                <ul className={`absolute right-0 top-0 bg-white py-2 rounded-xl shadow-xl border-t overflow-hidden ${dropdownOpen ? 'block' : 'hidden'}`}>
+                <ul className={`absolute right-0 top-0 bg-white py-2 rounded-xl shadow-xl border-t min-w-[12rem] overflow-hidden ${dropdownOpen ? 'block' : 'hidden'}`}>
                     {
                         dropDownLinks.map(link => (
                             <li key={link.title}>

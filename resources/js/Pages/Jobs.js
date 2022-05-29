@@ -234,9 +234,9 @@ export default function Jobs(props) {
 
                                     </div>
                                     <div>
-                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <h3 className="font-radio">Senior Frontend Developer</h3>
                                         <p className="text-sky-600">Webdev Online Solutions</p>
-                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                        <p className="text-sm text-gray-600 mt-1">$1.55K &mdash; $2K per month</p>
                                     </div>
                                 </Link>
                             </li>
@@ -246,9 +246,9 @@ export default function Jobs(props) {
 
                                     </div>
                                     <div>
-                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <h3 className="font-radio">Senior Frontend Developer</h3>
                                         <p className="text-sky-600">Webdev Online Solutions</p>
-                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                        <p className="text-sm text-gray-600 mt-1">$1.55K &mdash; $2K per month</p>
                                     </div>
                                 </Link>
                             </li>
@@ -258,9 +258,9 @@ export default function Jobs(props) {
 
                                     </div>
                                     <div>
-                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <h3 className="font-radio">Senior Frontend Developer</h3>
                                         <p className="text-sky-600">Webdev Online Solutions</p>
-                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                        <p className="text-sm text-gray-600 mt-1">$1.55K &mdash; $2K per month</p>
                                     </div>
                                 </Link>
                             </li>
@@ -270,9 +270,9 @@ export default function Jobs(props) {
 
                                     </div>
                                     <div>
-                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <h3 className="font-radio">Senior Frontend Developer</h3>
                                         <p className="text-sky-600">Webdev Online Solutions</p>
-                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                        <p className="text-sm text-gray-600 mt-1">$1.55K &mdash; $2K per month</p>
                                     </div>
                                 </Link>
                             </li>
@@ -282,9 +282,9 @@ export default function Jobs(props) {
 
                                     </div>
                                     <div>
-                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <h3 className="font-radio">Senior Frontend Developer</h3>
                                         <p className="text-sky-600">Webdev Online Solutions</p>
-                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                        <p className="text-sm text-gray-600 mt-1">$1.55K &mdash; $2K per month</p>
                                     </div>
                                 </Link>
                             </li>
@@ -294,9 +294,9 @@ export default function Jobs(props) {
 
                                     </div>
                                     <div>
-                                        <h3 className="font-radio">Senior Software Developer</h3>
+                                        <h3 className="font-radio">Senior Frontend Developer</h3>
                                         <p className="text-sky-600">Webdev Online Solutions</p>
-                                        <p className="text-sm text-gray-600 mt-1">$500 &mdash; $600 per month</p>
+                                        <p className="text-sm text-gray-600 mt-1">$1.55K &mdash; $2K per month</p>
                                     </div>
                                 </Link>
                             </li>
