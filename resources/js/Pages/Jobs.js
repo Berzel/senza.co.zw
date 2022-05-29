@@ -2,6 +2,7 @@ import { Head, Link } from "@inertiajs/inertia-react";
 import BackIcon from "../Components/BackIcon";
 import Filter from "../Components/Filter";
 import FilterIcon from "../Components/FilterIcon";
+import Options from "../Components/Options";
 import PlusIcon from "../Components/PlusIcon";
 import Sort from "../Components/Sort";
 import SortIcon from "../Components/SortIcon";
@@ -11,7 +12,7 @@ function PageTitle(props) {
     return (
         <div className="bg-sky-600 text-white">
             <div className="px-3 md:container flex justify-between items-center">
-                <div className="flex items-center space-x-2 md:space-x-4">
+                <div className="font-radio flex items-center space-x-2 md:space-x-4">
                     <Link href={route("home")} className="h-16 flex items-center space-x-2">
                         <BackIcon />
                         <span className="hidden md:inline-block">
@@ -19,7 +20,7 @@ function PageTitle(props) {
                         </span>
                     </Link>
                     <span className="hidden md:inline-block">/</span>
-                    <h1 className="font-radio">
+                    <h1>
                         All jobs in Zimbabwe
                     </h1>
                 </div>
@@ -199,20 +200,34 @@ export default function Jobs(props) {
                                 Recent jobs feed
                             </h2>
                             <div className="flex items-center">
-                                <button className="hidden md:flex items-center justify-center h-10 w-10 rounded-full">
-                                    <SortIcon className="h-5 w-5 fill-current" />
-                                </button>
-                                <button className="hidden md:flex items-center justify-center h-10 w-10 rounded-full">
-                                    <FilterIcon className="h-5 w-5" />
-                                </button>
+                                <Options icon={<SortIcon className="h-5 w-5 fill-current" />} title="Sort jobs">
+                                    <div>
+                                        Hello <br />
+                                        Hello <br />
+                                        Hello <br />
+                                        Hello <br />
+                                        Hello <br />
+                                        Hello <br />
+                                    </div>
+                                </Options>
+                                <Options icon={<FilterIcon className="h-5 w-5" />} title="Filter jobs">
+                                    <div>
+                                        Hello <br />
+                                        Hello <br />
+                                        Hello <br />
+                                        Hello <br />
+                                        Hello <br />
+                                        Hello <br />
+                                    </div>
+                                </Options>
                             </div>
                         </div>
                     </div>
-                    <div className="md:container lg:flex lg:justify-between md:mt-4">
-                        <div className="hidden lg:block lg:w-[25%] bg-white rounded-2xl p-3">
+                    <div className="md:container lg:flex lg:justify-between md:mt-4 lg:space-x-4">
+                        <div className="hidden lg:block lg:w-[15rem] bg-white rounded-2xl p-3">
                             Left
                         </div>
-                        <ul className="md:space-y-4 lg:w-[74%]">
+                        <ul className="md:space-y-4 lg:flex-grow">
                             <li>
                                 <Link href="#" className="px-3 py-4 flex space-x-3 md:bg-white md:rounded-2xl md:hover:shadow-lg">
                                     <div className="rounded-xl h-12 w-12 bg-pink-600">
