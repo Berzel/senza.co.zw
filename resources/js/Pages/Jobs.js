@@ -185,8 +185,8 @@ function CategoryList(props) {
 export default function Jobs(props) {
     return (
         <AppLayout>
-            <Head title="Homepage">
-                <meta name="description" content="Senza homepage" />
+            <Head title="All Jobs">
+                <meta name="description" content="All jobs on Senza" />
             </Head>
 
             <main>
