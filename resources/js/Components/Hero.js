@@ -9,7 +9,7 @@ export default function Hero (props) {
                 The recuitment <GradientText text="platform every employer" color="primary" /> needs!
             </h1>
             <p className="text-gray-600 lg:text-lg mt-4 lg:mt-6 max-w-[20rem] md:max-w-[25rem] lg:max-w-[30rem]">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas nulla amet debitis enim tempora error corrupti aspernatur placeat qui necessitatibus.
+                Forget strenuous screening and selection processes! Hire the best candidates for the job in less than two weeks without going bust.
             </p>
             <div className="mt-8 lg:mt-12 flex items-center space-x-4">
                 <Link href={route('jobs.create')} className="font-semibold bg-gradient-to-r from-pink-500 to-pink-600 inline-block px-6 lg:px-8 py-3 lg:py-4 rounded-r-full rounded-l-full shadow-xl shadow-pink-100 md:shadow-pink-200 text-white">
