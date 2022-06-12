@@ -7,12 +7,11 @@ import YoutubeIcon from "../Components/YoutubeIcon";
 
 export default function AppLayout(props) {
 
-    const iconClasses = "w-4 h-4 fill-current text-white"
     const socialMediaLinks = [
-        {href: 'https://facebook.com', icon: <FacebookIcon className={iconClasses} />},
-        {href: 'https://twitter.com', icon: <TwitterIcon className={iconClasses} />},
-        {href: 'https://youtube.com', icon: <YoutubeIcon className={iconClasses} />},
-        {href: 'https://linkedin.com', icon: <LinkedinIcon className={iconClasses} />},
+        {href: 'https://facebook.com', icon: <FacebookIcon />},
+        {href: 'https://twitter.com', icon: <TwitterIcon />},
+        {href: 'https://youtube.com', icon: <YoutubeIcon />},
+        {href: 'https://linkedin.com', icon: <LinkedinIcon />},
     ]
 
     return (
@@ -42,7 +41,7 @@ export default function AppLayout(props) {
                                 <div className="flex items-center space-x-5 pr-2 mt-8">
                                     {
                                         socialMediaLinks.map(link => (
-                                            <a target="_blank" key={link.href} href={link.href}>
+                                            <a target="_blank" className="w-4 h-4 text-white hover:scale-110 transition" key={link.href} href={link.href}>
                                                 {link.icon}
                                             </a>
                                         ))
