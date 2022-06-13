@@ -24,10 +24,10 @@ class JobsController extends Controller
      */
     public function create() : Response
     {
-        $categories = ['Administrative', 'Marketing', 'Accounting', 'Management', 'IT & Telecoms', 'Banking', 'Sales', 'Mining', 'Domestic Stuff', 'Banking', 'Pharmaceutical', 'Medicine', 'Farming', 'Customer Service', 'Management', 'Food Services', 'Art & Design', 'Sales'];
+        $tags = ['Administrative', 'Marketing', 'Accounting', 'Management', 'IT & Telecoms', 'Banking', 'Sales', 'Mining', 'Domestic Stuff', 'Banking', 'Pharmaceutical', 'Medicine', 'Farming', 'Customer Service', 'Management', 'Food Services', 'Art & Design', 'Sales'];
 
         return Inertia::render('Jobs/NewJob', [
-            'allCategories' => $categories
+            'allTags' => $tags
         ]);
     }
 }

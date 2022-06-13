@@ -3,7 +3,6 @@ import { Checkbox, FormControl, FormControlLabel, Radio, RadioGroup, Slider } fr
 import { useState } from "react";
 import PageTitle from "../../Components/PageTitle";
 import PlusIcon from "../../Components/PlusIcon";
-import SearchIcon from "../../Components/SearchIcon";
 import AppLayout from "../../Layouts/AppLayout";
 
 function Pill(props){
@@ -31,7 +30,7 @@ function Input({name, type, value, onChange, placeholder}) {
                         id={name}
                         rows="10"
                         placeholder={placeholder}
-                        className="block w-full px-3 py-4 outline-none rounded-2xl bg-white border-2 border-sky-600 border-opacity-50 placeholder:text-gray-600 placeholder:text-opacity-50 text-gray-900 mt-2 md:mt-4"
+                        className="block w-full px-3 py-4 outline-none rounded-2xl bg-white border-2 border-transparent focus:border-sky-600 focus:border-opacity-50 placeholder:text-gray-600 placeholder:text-opacity-50 text-gray-900 mt-2 md:mt-4"
                     />
                 ) : (
                     <input
@@ -40,7 +39,7 @@ function Input({name, type, value, onChange, placeholder}) {
                         id={name}
                         type="text"
                         placeholder={placeholder}
-                        className="block w-full px-3 py-4 outline-none rounded-2xl bg-white border-2 border-sky-600 border-opacity-50 placeholder:text-gray-600 placeholder:text-opacity-50 text-gray-900 mt-2 md:mt-4"
+                        className="block w-full px-3 py-4 outline-none rounded-2xl bg-white border-2 border-transparent focus:border-sky-600 focus:border-opacity-50 placeholder:text-gray-600 placeholder:text-opacity-50 text-gray-900 mt-2 md:mt-4"
                     />
                 )
             }
@@ -48,10 +47,10 @@ function Input({name, type, value, onChange, placeholder}) {
     )
 }
 
-function JobTitleInput({title, setTitle}) {
+function TitleInput({title, setTitle}) {
     return (
         <label htmlFor="title" className="block">
-            <h3 className="font-radio font-semibold text-gray-600">Job title / Position</h3>
+            <h3 className="font-radio font-semibold text-gray-600">Title / Position</h3>
             <p className="text-sm mt-1 md:w-[80%] text-gray-400">
                 Specify as single job position like "Marketing Manager" not a sentence. No CAPITAL LETTERS or job count e.g. "x2".
             </p>
@@ -60,11 +59,11 @@ function JobTitleInput({title, setTitle}) {
     )
 }
 
-function JobDescriptionInput({description, setDescription}) {
+function DescriptionInput({description, setDescription}) {
     return (
         <label htmlFor="description" className="block">
             <h3 className="font-radio font-semibold text-gray-600 mt-8">
-                Job description
+                Description
             </h3>
             <p className=" text-sm mt-1 md:w-[80%] text-gray-400">
                 Make sure to include duties &amp; responsibilities, plus qualifications and any relavant information about your company.
@@ -74,41 +73,41 @@ function JobDescriptionInput({description, setDescription}) {
     )
 }
 
-function JobCategoriesInput({categories, setCategories, allCategories}) {
+function TagsInput({tags, setTags, allTags}) {
 
     /**
-     * Check if a category is selected
+     * Check if a tag is selected
      *
-     * @param {*} category
+     * @param {*} tag
      * @returns
      */
-     function isCategorySelected(category){
-        return categories.includes(category)
+     function isTagSelected(tag){
+        return tags.includes(tag)
     }
 
     /**
-     * Toggle the selection status of the category
+     * Toggle the selection status of the tag
      *
-     * @param {*} category
+     * @param {*} tag
      * @returns
      */
-    function toggleCategory(category) {
-        return isCategorySelected(category)
-            ? setCategories(categories.filter(cat => cat !== category))
-            : setCategories([...categories, category])
+    function toggleTag(tag) {
+        return isTagSelected(tag)
+            ? setTags(tags.filter(t => t !== tag))
+            : setTags([...tags, tag])
     }
     return (
         <div>
             <label htmlFor="" className="block">
-                <h3 className="font-radio font-semibold text-gray-600 mt-8">Job Categories / Tags</h3>
-                <p className="text-sm mt-1 md:w-[80%] text-gray-400">Select all categories that apply. We've already suggested some for you.</p>
+                <h3 className="font-radio font-semibold text-gray-600 mt-8">Tags</h3>
+                <p className="text-sm mt-1 md:w-[80%] text-gray-400">Select all tags that apply. We've already suggested some for you.</p>
             </label>
 
             <div className="mt-4">
                 <div className="hidden md:flex md:flex-wrap md:-mx-2 mt-4">
                     {
-                        allCategories.map((cat, i) => (
-                            <Pill key={i} text={cat} active={isCategorySelected(cat)} onClick={() => toggleCategory(cat)} />
+                        allTags.map((tag, i) => (
+                            <Pill key={i} text={tag} active={isTagSelected(tag)} onClick={() => toggleTag(tag)} />
                         ))
                     }
                     <button type="button" className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
@@ -121,7 +120,7 @@ function JobCategoriesInput({categories, setCategories, allCategories}) {
                             <PlusIcon className="h-4 w-4 fill-current" />
                         </span>
                         <span className="font-semibold">
-                            View more categories
+                            View more tags
                         </span>
                     </button>
                 </div>
@@ -130,11 +129,36 @@ function JobCategoriesInput({categories, setCategories, allCategories}) {
     )
 }
 
-export default function NewJob({allCategories, contractTypes, workExperienceRanges, renumerationRanges}) {
+function CategoriesInput({categories, setCategories, allCategories}) {
+    return (
+        <label htmlFor="title" className="block">
+            <h3 className="font-radio font-semibold text-gray-600">Categories</h3>
+            <p className="text-sm mt-1 md:w-[80%] text-gray-400">
+                Add all the job categories that apply to this job. You can select up to a maximum of three.
+            </p>
+            <Input placeholder="Start typing to search..." />
+        </label>
+    )
+}
+
+function CompanyInput({}) {
+    return (
+        <label htmlFor="title" className="block">
+            <h3 className="font-radio font-semibold text-gray-600">Company</h3>
+            <p className="text-sm mt-1 md:w-[80%] text-gray-400">
+                Enter the company name
+            </p>
+            <Input placeholder="Company name..." />
+        </label>
+    )
+}
+
+export default function NewJob({allCategories, allTags, contractTypes, workExperienceRanges, renumerationRanges}) {
     const [value, setValue] = useState([20, 50])
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
-    const [categories, setCategories] = useState([])
+    const [tags, setTags] = useState([])
+    const [categories, setCategories] = useState([]);
 
     const labelStyles = {
         '& .MuiFormControlLabel-label': {
@@ -173,7 +197,7 @@ export default function NewJob({allCategories, contractTypes, workExperienceRang
                                     <li>
                                         <Link href="#" className="p-3 flex items-center space-x-3 rounded-xl text-gray-600 hover:bg-pink-100 hover:text-pink-600">
                                             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                                             </svg>
                                             <span className="hidden lg:inline-block">
                                                 Applications
@@ -210,7 +234,7 @@ export default function NewJob({allCategories, contractTypes, workExperienceRang
                                     <li>
                                         <Link href="#" className="p-3 flex items-center space-x-3 rounded-xl text-gray-600 hover:bg-pink-100 hover:text-pink-600">
                                             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                                                <path stroke-linecap="round" stroke-linejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
+                                                <path strokeLinecap="round" strokeLinejoin="round" d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
                                             </svg>
                                             <span className="hidden lg:inline-block">
                                                 Applications
@@ -234,9 +258,11 @@ export default function NewJob({allCategories, contractTypes, workExperienceRang
                     <div className="lg:flex-grow">
                         <h3 className="text-xl font-semibold font-radio md:mt-1">Job Details</h3>
                         <form action="#" className="block space-y-4 md:space-y-12 mt-4">
-                            <JobTitleInput title={title} setTitle={setTitle} />
-                            <JobDescriptionInput description={description} setDescription={setDescription} />
-                            <JobCategoriesInput categories={categories} setCategories={setCategories} allCategories={allCategories} />
+                            <TitleInput title={title} setTitle={setTitle} />
+                            <CategoriesInput categories={categories} setCategories={setCategories} allCategories={allCategories} />
+                            <DescriptionInput description={description} setDescription={setDescription} />
+                            <CompanyInput />
+                            <TagsInput tags={tags} setTags={setTags} allTags={allTags} />
                             <div className="border-t">
                                 <label htmlFor="" className="block">
                                     <h3 className="font-radio font-semibold text-gray-600 mt-8 md:mt-12">Contract type</h3>

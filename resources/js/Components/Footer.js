@@ -44,7 +44,7 @@ export default function Footer(props) {
                         <ul className="mt-4 space-y-2">
                             <li>
                                 <Link href="#" className="flex items-center space-x-1 hover:scale-110 transition">
-                                    <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                                    <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                     <span>
@@ -54,7 +54,7 @@ export default function Footer(props) {
                             </li>
                             <li>
                                 <Link href={route('jobs.index')} className="flex items-center space-x-1 hover:scale-110 transition">
-                                    <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                                    <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                     <span>
@@ -64,7 +64,7 @@ export default function Footer(props) {
                             </li>
                             <li>
                                 <Link href={route('jobs.create')} className="flex items-center space-x-1 hover:scale-110 transition">
-                                    <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                                    <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                     <span>
@@ -74,7 +74,7 @@ export default function Footer(props) {
                             </li>
                             <li>
                                 <Link href="#" className="flex items-center space-x-1 hover:scale-110 transition">
-                                    <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                                    <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                     <span>
@@ -89,7 +89,7 @@ export default function Footer(props) {
                         <ul className="mt-4 space-y-2">
                             <li>
                                 <Link href="#" className="flex items-center space-x-1 hover:scale-110 transition">
-                                    <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                                    <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                     <span>
@@ -99,7 +99,7 @@ export default function Footer(props) {
                             </li>
                             <li>
                                 <Link href="#" className="flex items-center space-x-1 hover:scale-110 transition">
-                                    <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                                    <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                     <span>
@@ -109,7 +109,7 @@ export default function Footer(props) {
                             </li>
                             <li>
                                 <Link href="#" className="flex items-center space-x-1 hover:scale-110 transition">
-                                    <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                                    <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                     <span>
@@ -124,7 +124,7 @@ export default function Footer(props) {
                         <ul className="mt-4 space-y-2">
                             <li>
                                 <Link href="#" className="flex items-center space-x-1 hover:scale-110 transition">
-                                    <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                                    <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                     <span>
@@ -134,7 +134,7 @@ export default function Footer(props) {
                             </li>
                             <li>
                                 <Link href="#" className="flex items-center space-x-1 hover:scale-110 transition">
-                                    <svg class="h-4 w-4 fill-current" viewBox="0 0 20 20">
+                                    <svg className="h-4 w-4 fill-current" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd" />
                                     </svg>
                                     <span>
