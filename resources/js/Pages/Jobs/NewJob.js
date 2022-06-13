@@ -1,9 +1,10 @@
 import { Head, Link } from "@inertiajs/inertia-react";
 import { Checkbox, FormControl, FormControlLabel, Radio, RadioGroup, Slider } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import PageTitle from "../../Components/PageTitle";
 import PlusIcon from "../../Components/PlusIcon";
 import AppLayout from "../../Layouts/AppLayout";
+import { ClickAwayListener } from "@mui/base";
 
 function Pill(props){
     const inActiveClasses = "bg-sky-100 text-sky-600 hover:text-pink-600"
@@ -141,14 +142,111 @@ function CategoriesInput({categories, setCategories, allCategories}) {
     )
 }
 
-function CompanyInput({}) {
+function CompanyInput({company, setCompany}) {
+    const [focused, setFocused] = useState(false)
+    const [value, setValue] = useState(company)
+    const [startVal, setStartVal] = useState('')
+
+    /**
+     * Update the value every time the company changes
+     */
+    useEffect(() => {
+        startVal ? setValue(startVal) : setValue(company)
+        setStartVal('')
+    }, [company])
+
+    /**
+     * Every time a change happens we want to search for matching companies and show the options
+     *
+     * @param {*} e
+     */
+    function handleChange(e) {
+        setValue(e.target.value)
+        // Peform debounced http get searching for companies that match the query string
+    }
+
+    /**
+     * When the user clicks away from the input, we should.
+     * 1. Search if the value typed matches any company name and set that as the selected company
+     * 2. If no match then clear the input
+     */
+    function handleClickAway() {
+        if (!company) setValue('')
+        setFocused(false)
+    }
+
+    /**
+     * When the input gains focus we should:
+     * 1. Save the start value so input doesn't clear when user start typing and company is unset
+     * 2. Set focused to true so the auto complete dropdown appears
+     * 3. Set company to '' so that we can do a fresh search when typing
+     *
+     * @param {*} e Focus event
+     */
+    function handleFocus(e) {
+        setStartVal(e.target.value)
+        setFocused(true)
+        setCompany('')
+    }
+
+    /**
+     * Return a function that select a company when option is clicked
+     *
+     * @param {*} company
+     * @returns
+     */
+    function select(company) {
+        return () => {
+            setCompany(company)
+            setTimeout(() => setFocused(false), 0)
+        }
+    }
+
     return (
-        <label htmlFor="title" className="block">
+        <label htmlFor="company" className="block">
             <h3 className="font-radio font-semibold text-gray-600">Company</h3>
             <p className="text-sm mt-1 md:w-[80%] text-gray-400">
-                Enter the company name
+                Enter only the company name without the extension e.g LLC, PBC, or Private Limited.
             </p>
-            <Input placeholder="Company name..." />
+            <ClickAwayListener onClickAway={handleClickAway}>
+                <div className={`relative`}>
+                    <input
+                        type='text'
+                        id='company'
+                        value={value}
+                        onFocus={handleFocus}
+                        onChange={handleChange}
+                        placeholder='Enter company name...'
+                        className={`block w-full px-3 py-4 outline-none rounded-2xl ${focused ? 'rounded-b-none border-b-transparent border-sky-600 border-opacity-50': 'border-transparent'} bg-white border-2  placeholder:text-gray-600 placeholder:text-opacity-50 text-gray-900 mt-2 md:mt-4`}
+                    />
+
+                    {
+                        focused && (
+                            <div className={`absolute left-0 right-0 px-3 bg-white border-l-2 border-b-2 border-r-2 rounded-bl-2xl rounded-br-2xl border-sky-600 border-opacity-50 ${focused ? 'shadow-xl' : null}`}>
+                                <div className="py-3 border-t">
+                                    <ul>
+                                        <li>
+                                            <button type="button" className="block w-full py-2 hover:px-2 hover:rounded-xl hover:bg-pink-50 hover:text-pink-600 text-left transition" onClick={select('Senza')}>
+                                                Senza
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" className="block w-full py-2 hover:px-2 hover:rounded-xl hover:bg-pink-50 hover:text-pink-600 text-left transition" onClick={select('WebDev')}>
+                                                WebDev
+                                            </button>
+                                        </li>
+                                        <li>
+                                            <button type="button" className="block w-full py-2 hover:px-2 hover:rounded-xl hover:bg-pink-50 hover:text-pink-600 text-left transition" onClick={select('Google')}>
+                                                Google
+                                            </button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        )
+                    }
+                </div>
+            </ClickAwayListener>
         </label>
     )
 }
@@ -158,7 +256,8 @@ export default function NewJob({allCategories, allTags, contractTypes, workExper
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [tags, setTags] = useState([])
-    const [categories, setCategories] = useState([]);
+    const [categories, setCategories] = useState([])
+    const [company, setCompany] = useState('')
 
     const labelStyles = {
         '& .MuiFormControlLabel-label': {
@@ -261,7 +360,7 @@ export default function NewJob({allCategories, allTags, contractTypes, workExper
                             <TitleInput title={title} setTitle={setTitle} />
                             <CategoriesInput categories={categories} setCategories={setCategories} allCategories={allCategories} />
                             <DescriptionInput description={description} setDescription={setDescription} />
-                            <CompanyInput />
+                            <CompanyInput company={company} setCompany={setCompany} />
                             <TagsInput tags={tags} setTags={setTags} allTags={allTags} />
                             <div className="border-t">
                                 <label htmlFor="" className="block">
