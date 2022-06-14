@@ -7,7 +7,7 @@ import AppLayout from "../../Layouts/AppLayout";
 import { ClickAwayListener } from "@mui/base";
 
 function Pill(props){
-    const inActiveClasses = "bg-sky-100 text-sky-600 hover:text-pink-600"
+    const inActiveClasses = "bg-sky-50 text-sky-600 hover:text-pink-600"
     const activeClasses = "bg-pink-600 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-white"
 
     return (
@@ -111,12 +111,12 @@ function TagsInput({tags, setTags, allTags}) {
                             <Pill key={i} text={tag} active={isTagSelected(tag)} onClick={() => toggleTag(tag)} />
                         ))
                     }
-                    <button type="button" className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                    <button type="button" className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                         <span className="font-semibold">
                             Other &ndash; Specify
                         </span>
                     </button>
-                    <button type="button" className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg px-6 py-3 m-2 rounded-full flex items-center space-x-2 pl-2 viewAllBtn">
+                    <button type="button" className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg px-6 py-3 m-2 rounded-full flex items-center space-x-2 pl-2 viewAllBtn">
                         <span className="h-6 w-6 rounded-full bg-sky-600 text-white flex items-center justify-center viewAllBtn_icon">
                             <PlusIcon className="h-4 w-4 fill-current" />
                         </span>
@@ -296,7 +296,7 @@ export default function NewJob({allCategories, allTags, contractTypes, workExper
                                 </div>
                                 <ul className="lg:mt-4 space-y-2">
                                     <li>
-                                        <Link href="#" className="p-3 flex items-center space-x-3 rounded-xl bg-sky-100 text-sky-600 font-semibold">
+                                        <Link href="#" className="p-3 flex items-center space-x-3 rounded-xl bg-sky-50 text-sky-600 font-semibold">
                                             <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
                                                 <path strokeLinecap="round" strokeLinejoin="round" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                                             </svg>
@@ -396,16 +396,16 @@ export default function NewJob({allCategories, allTags, contractTypes, workExper
                                         <button className="bg-pink-600 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-white hover:text-white shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             Full Time
                                         </button>
-                                        <button type="button" className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button type="button" className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             Part Time
                                         </button>
-                                        <button type="button" className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button type="button" className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             Fixed Term
                                         </button>
-                                        <button type="button" className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button type="button" className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             Internship
                                         </button>
-                                        <button type="button" className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button type="button" className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             Zero Hours
                                         </button>
                                     </div>
@@ -430,19 +430,19 @@ export default function NewJob({allCategories, allTags, contractTypes, workExper
                                         </FormControl>
                                     </div>
                                     <div className="hidden md:flex md:flex-wrap md:-mx-2">
-                                        <button type="button" className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button type="button" className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             No experience
                                         </button>
                                         <button className="bg-pink-600 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-white hover:text-white shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             1 - 3 Years
                                         </button>
-                                        <button type="button" className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button type="button" className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             4 - 7 Years
                                         </button>
-                                        <button type="button" className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button type="button" className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             8 - 10 Years
                                         </button>
-                                        <button type="button" className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button type="button" className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             More than 10 years
                                         </button>
                                     </div>
@@ -467,19 +467,19 @@ export default function NewJob({allCategories, allTags, contractTypes, workExper
                                         </FormControl>
                                     </div>
                                     <div className="hidden md:flex md:flex-wrap md:-mx-2">
-                                        <button className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             Hourly
                                         </button>
-                                        <button className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             Daily
                                         </button>
-                                        <button className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             Weekly
                                         </button>
                                         <button className="bg-pink-600 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-white hover:text-white shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             Monthly
                                         </button>
-                                        <button className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
+                                        <button className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg inline-block px-6 py-3 m-2 rounded-full">
                                             Yearly
                                         </button>
                                     </div>

@@ -7,10 +7,10 @@ import YoutubeIcon from "../Components/YoutubeIcon";
 export default function Footer(props) {
 
     const socialMediaLinks = [
-        {href: 'https://facebook.com', icon: <FacebookIcon />},
-        {href: 'https://twitter.com', icon: <TwitterIcon />},
-        {href: 'https://youtube.com', icon: <YoutubeIcon />},
-        {href: 'https://linkedin.com', icon: <LinkedinIcon />},
+        {name: 'Facebook', href: 'https://facebook.com', icon: <FacebookIcon />},
+        {name: 'Twitter', href: 'https://twitter.com', icon: <TwitterIcon />},
+        {name: 'YouTube', href: 'https://youtube.com', icon: <YoutubeIcon />},
+        {name: 'LinkedIn', href: 'https://linkedin.com', icon: <LinkedinIcon />},
     ]
 
     return (
@@ -34,6 +34,9 @@ export default function Footer(props) {
                                 socialMediaLinks.map(link => (
                                     <a target="_blank" className="w-4 h-4 text-white hover:scale-110 transition" key={link.href} href={link.href}>
                                         {link.icon}
+                                        <span className="h-0 w-0 overflow-hidden inline-block">
+                                            {link.name}
+                                        </span>
                                     </a>
                                 ))
                             }
