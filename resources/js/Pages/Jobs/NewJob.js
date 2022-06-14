@@ -143,9 +143,14 @@ function CategoriesInput({categories, setCategories, allCategories}) {
 }
 
 function CompanyInput({company, setCompany}) {
+    const [suggestions, setSuggestions] = useState([])
     const [focused, setFocused] = useState(false)
-    const [value, setValue] = useState(company)
     const [startVal, setStartVal] = useState('')
+    const [value, setValue] = useState(company)
+
+    useEffect(() => {
+        setSuggestions(['Senza', 'Webdev', 'Google', 'Afrosoft'])
+    }, [])
 
     /**
      * Update the value every time the company prop changes
@@ -161,6 +166,7 @@ function CompanyInput({company, setCompany}) {
      * @param {*} e
      */
     function handleChange(e) {
+        !focused && setFocused(true)
         setValue(e.target.value)
         // Peform debounced http get searching for companies that match the query string
     }
@@ -221,29 +227,24 @@ function CompanyInput({company, setCompany}) {
                         onFocus={handleFocus}
                         onChange={handleChange}
                         placeholder='Enter company name...'
+                        onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
                         className={`block w-full px-3 py-4 outline-none rounded-2xl ${focused ? 'rounded-b-none border-b-transparent border-sky-600 border-opacity-50': 'border-transparent'} bg-white border-2  placeholder:text-gray-600 placeholder:text-opacity-50 text-gray-900 mt-2 md:mt-4`}
                     />
 
                     {
                         focused && (
-                            <div className={`absolute left-0 right-0 px-3 bg-white border-l-2 border-b-2 border-r-2 rounded-bl-2xl rounded-br-2xl border-sky-600 border-opacity-50 ${focused ? 'shadow-xl' : null}`}>
+                            <div className={`absolute left-0 right-0 px-3 bg-white border-l-2 border-b-2 border-r-2 rounded-bl-2xl rounded-br-2xl border-sky-600 border-opacity-50 -mt-[2px] ${focused ? 'shadow-xl' : null}`}>
                                 <div className="py-3 border-t">
                                     <ul>
-                                        <li>
-                                            <button type="button" className="block w-full py-2 hover:px-2 hover:rounded-xl hover:bg-pink-50 hover:text-pink-600 text-left transition" onClick={select('Senza')}>
-                                                Senza
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button" className="block w-full py-2 hover:px-2 hover:rounded-xl hover:bg-pink-50 hover:text-pink-600 text-left transition" onClick={select('WebDev')}>
-                                                WebDev
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <button type="button" className="block w-full py-2 hover:px-2 hover:rounded-xl hover:bg-pink-50 hover:text-pink-600 text-left transition" onClick={select('Google')}>
-                                                Google
-                                            </button>
-                                        </li>
+                                        {
+                                            suggestions.map(suggestion => (
+                                                <li key={suggestion}>
+                                                    <button type="button" className="block w-full py-2 hover:px-2 hover:rounded-xl hover:bg-pink-50 hover:text-pink-600 text-left transition" onClick={select(suggestion)}>
+                                                        {suggestion}
+                                                    </button>
+                                                </li>
+                                            ))
+                                        }
                                     </ul>
                                 </div>
                             </div>
@@ -256,18 +257,25 @@ function CompanyInput({company, setCompany}) {
 }
 
 export default function NewJob({allCategories, allTags, contractTypes, workExperienceRanges, renumerationRanges}) {
-    const [value, setValue] = useState([20, 50])
     const [title, setTitle] = useState('')
     const [description, setDescription] = useState('')
     const [tags, setTags] = useState([])
     const [categories, setCategories] = useState([])
     const [company, setCompany] = useState('')
 
+    // Placeholder for range
+    const [value, setValue] = useState([20, 50])
+
     const labelStyles = {
         '& .MuiFormControlLabel-label': {
             fontFamily: '"Nunito", sans-serif',
             color: 'rgb(75 85 99 / 1)' //text-gray-600
         }
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        console.log({title, company})
     }
 
     return (
@@ -360,7 +368,7 @@ export default function NewJob({allCategories, allTags, contractTypes, workExper
                     </div>
                     <div className="lg:flex-grow">
                         <h3 className="text-xl font-semibold font-radio md:mt-1">Job Details</h3>
-                        <form action="#" className="block space-y-4 md:space-y-12 mt-4">
+                        <form action="#" className="block space-y-4 md:space-y-12 mt-4" onSubmit={handleSubmit}>
                             <TitleInput title={title} setTitle={setTitle} />
                             <CategoriesInput categories={categories} setCategories={setCategories} allCategories={allCategories} />
                             <DescriptionInput description={description} setDescription={setDescription} />
