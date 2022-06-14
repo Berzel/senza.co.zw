@@ -148,7 +148,7 @@ function CompanyInput({company, setCompany}) {
     const [startVal, setStartVal] = useState('')
 
     /**
-     * Update the value every time the company changes
+     * Update the value every time the company prop changes
      */
     useEffect(() => {
         startVal ? setValue(startVal) : setValue(company)
@@ -171,7 +171,11 @@ function CompanyInput({company, setCompany}) {
      * 2. If no match then clear the input
      */
     function handleClickAway() {
-        if (!company) setValue('')
+        async function searchQuery() {
+            false ? setCompany(value) : setValue('')
+        }
+
+        !company && value ? searchQuery() : null
         setFocused(false)
     }
 
