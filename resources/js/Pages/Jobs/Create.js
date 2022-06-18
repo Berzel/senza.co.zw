@@ -17,11 +17,12 @@ import CategoriesInput from "../../Components/Forms/CreateJob/CategoriesInput";
 import TagsInput from "../../Components/Forms/CreateJob/TagsInput";
 
 export default function Create() {
-    const [title, setTitle] = useState('')
+    const [title, setTitle] = useState('Kickass Laravel Developer')
+    const [salary, setSalary] = useState({min: 100, max: 250, period: 'Monthly'})
     const [description, setDescription] = useState('')
     const [categories, setCategories] = useState([])
-    const [tags, setTags] = useState([])
     const [company, setCompany] = useState('')
+    const [tags, setTags] = useState([])
 
     const labelStyles = {
         '& .MuiFormControlLabel-label': {
@@ -32,13 +33,13 @@ export default function Create() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log({title, company})
+        console.log({title, salary})
     }
 
     return (
         <AppLayout>
-            <Head title="Create job">
-                <meta name="description" content="Create new job on senza" />
+            <Head title="Post New job">
+                <meta name="description" content="Create new job on Senza" />
             </Head>
 
             <main>
@@ -128,7 +129,7 @@ export default function Create() {
                             <TitleInput title={title} setTitle={setTitle} />
                             <div className="flex flex-wrap">
                                 <div className="basis-[50%] flex-shrink-0">
-                                    <SalaryInput />
+                                    <SalaryInput salary={salary} setSalary={setSalary} />
                                 </div>
                                 <div className="basis-[50%] flex-shrink-0">
                                     <ExperienceInput />
