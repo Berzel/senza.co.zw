@@ -18,7 +18,9 @@ import TagsInput from "../../Components/Forms/CreateJob/TagsInput";
 
 export default function Create() {
     const [title, setTitle] = useState('Kickass Laravel Developer')
-    const [salary, setSalary] = useState({min: 100, max: 250, period: 'Monthly'})
+    const [salary, setSalary] = useState({min: 500, max: 900, period: 'Monthly'})
+    const [experience, setExperience] = useState({min: 2, max: 5, period: 'Years'})
+    const [contractType, setContractType] = useState('Full Time')
     const [description, setDescription] = useState('')
     const [categories, setCategories] = useState([])
     const [company, setCompany] = useState('')
@@ -33,7 +35,7 @@ export default function Create() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log({title, salary})
+        console.log({title, salary, experience, contractType})
     }
 
     return (
@@ -132,10 +134,10 @@ export default function Create() {
                                     <SalaryInput salary={salary} setSalary={setSalary} />
                                 </div>
                                 <div className="basis-[50%] flex-shrink-0">
-                                    <ExperienceInput />
+                                    <ExperienceInput experience={experience} setExperience={setExperience} />
                                 </div>
                                 <div className="basis-[50%] flex-shrink-0">
-                                    <ContractTypeInput />
+                                    <ContractTypeInput contractType={contractType} setContractType={setContractType} />
                                 </div>
                                 <div className="basis-[50%] flex-shrink-0">
                                     <LocationInput />

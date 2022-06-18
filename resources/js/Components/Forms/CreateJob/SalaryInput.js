@@ -41,7 +41,7 @@ export default function SalaryInput({salary, setSalary}) {
             </div>
             <div>
                 <div className="flex items-center text-gray-700">
-                    <div className="flex items-center relative">
+                    <div className={`flex items-center relative ${showMinSalaryOptions && 'z-10'}`}>
                         <button type="button" onClick={() => setShowMinSalaryOptions(true)} className="text-gray-700 font-semibold hover:text-sky-600">
                             ${salary.min}
                         </button>
@@ -53,10 +53,10 @@ export default function SalaryInput({salary, setSalary}) {
                         {
                             showMinSalaryOptions && (
                                 <ClickAwayListener onClickAway={() => setShowMinSalaryOptions(false)}>
-                                    <div className="absolute top-0 left-0 min-w-[5rem] bg-white border py-2 rounded-lg shadow-lg">
+                                    <div className="absolute top-0 left-0 min-w-[7rem] bg-white border py-2 rounded-lg shadow-lg">
                                         {
                                             salaryOptions.filter((o, i) => i < salaryOptions.length - 1).map((o) => (
-                                                <button onClick={() => setMinSalary(o)} type="button" key={o} className="py-1 px-2 block w-full text-left hover:bg-pink-100 hover:text-pink-600 hover:font-semibold">
+                                                <button onClick={() => setMinSalary(o)} type="button" key={o} className="py-1 px-3 block w-full text-left hover:bg-pink-100 hover:text-pink-600 hover:font-semibold">
                                                     ${o}
                                                 </button>
                                             ))
@@ -69,7 +69,7 @@ export default function SalaryInput({salary, setSalary}) {
                     <span className="mx-2  font-semibold">
                         &mdash;
                     </span>
-                    <div className="flex items-center relative">
+                    <div className={`flex items-center relative ${showMaxSalaryOptions && 'z-10'}`}>
                         <button type="button" onClick={() => setShowMaxSalaryOptions(true)} className="text-gray-700 font-semibold hover:text-sky-600">
                             ${salary.max}
                         </button>
@@ -81,10 +81,10 @@ export default function SalaryInput({salary, setSalary}) {
                         {
                             showMaxSalaryOptions && (
                                 <ClickAwayListener onClickAway={() => setShowMaxSalaryOptions(false)}>
-                                    <div className="absolute top-0 left-0 min-w-[5rem] bg-white border py-2 rounded-lg shadow-lg">
+                                    <div className="absolute top-0 left-0 min-w-[7rem] bg-white border py-2 rounded-lg shadow-lg">
                                         {
                                             salaryOptions.filter((o, i) => i > 0).map((o) => (
-                                                <button onClick={() => setMaxSalary(o)} type="button" key={o} className="py-1 px-2 block w-full text-left hover:bg-pink-100 hover:text-pink-600 hover:font-semibold">
+                                                <button onClick={() => setMaxSalary(o)} type="button" key={o} className="py-1 px-3 block w-full text-left hover:bg-pink-100 hover:text-pink-600 hover:font-semibold">
                                                     ${o}
                                                 </button>
                                             ))
