@@ -1,5 +1,5 @@
 import { useState } from "react"
-import FilterIcon from "./FilterIcon"
+import FilterIcon from "./Icons/FilterIcon"
 import Modal from "./Modal"
 
 export default function Filter(props) {

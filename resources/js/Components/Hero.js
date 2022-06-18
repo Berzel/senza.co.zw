@@ -1,6 +1,6 @@
 import { Link } from "@inertiajs/inertia-react";
 import GradientText from "./GradientText";
-import SearchIcon from "./SearchIcon";
+import SearchIcon from "./Icons/SearchIcon";
 
 export default function Hero (props) {
     return (

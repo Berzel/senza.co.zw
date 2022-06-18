@@ -14,7 +14,7 @@ class JobsController extends Controller
      */
     public function showAll() : Response
     {
-        return Inertia::render('Jobs');
+        return Inertia::render('Jobs/Index');
     }
 
     /**
@@ -24,10 +24,6 @@ class JobsController extends Controller
      */
     public function create() : Response
     {
-        $tags = ['Administrative', 'Marketing', 'Accounting', 'Management', 'IT & Telecoms', 'Banking', 'Sales', 'Mining', 'Domestic Stuff', 'Banking', 'Pharmaceutical', 'Medicine', 'Farming', 'Customer Service', 'Management', 'Food Services', 'Art & Design', 'Sales'];
-
-        return Inertia::render('Jobs/NewJob', [
-            'allTags' => $tags
-        ]);
+        return Inertia::render('Jobs/Create');
     }
 }

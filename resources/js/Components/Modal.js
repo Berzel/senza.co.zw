@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import ClickAwayListener from "@mui/base/ClickAwayListener";
 import Portal from "@mui/base/Portal";
-import CloseIcon from "./CloseIcon";
+import CloseIcon from "./Icons/CloseIcon";
 
 export default function Modal({title, close, children}) {
 

@@ -1,4 +1,4 @@
-import SearchIcon from "./SearchIcon";
+import SearchIcon from "./Icons/SearchIcon";
 
 export default function SearchForm (props) {
     return (

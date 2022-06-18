@@ -1,8 +1,8 @@
 import { Link } from "@inertiajs/inertia-react";
-import FacebookIcon from "../Components/FacebookIcon";
-import LinkedinIcon from "../Components/LinkedinIcon";
-import TwitterIcon from "../Components/TwitterIcon";
-import YoutubeIcon from "../Components/YoutubeIcon";
+import FacebookIcon from "../Components/Icons/FacebookIcon";
+import LinkedinIcon from "../Components/Icons/LinkedinIcon";
+import TwitterIcon from "../Components/Icons/TwitterIcon";
+import YoutubeIcon from "../Components/Icons/YoutubeIcon";
 
 export default function Footer(props) {
 

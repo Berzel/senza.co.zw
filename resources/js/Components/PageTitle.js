@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/inertia-react";
-import BackIcon from "./BackIcon";
+import BackIcon from "./Icons/BackIcon";
 
 export default function PageTitle({title}){
     return (

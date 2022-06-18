@@ -1,5 +1,5 @@
 import { Link } from "@inertiajs/inertia-react";
-import PlusIcon from "./PlusIcon";
+import PlusIcon from "./Icons/PlusIcon";
 
 export default function AddJobBtn(props) {
     return (

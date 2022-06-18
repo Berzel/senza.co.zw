@@ -1,4 +1,4 @@
-import SearchIcon from "./SearchIcon";
+import SearchIcon from "./Icons/SearchIcon";
 
 export default function SearchBtn (props) {
     return (

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Modal from "./Modal";
-import SortIcon from "./SortIcon";
+import SortIcon from "./Icons/SortIcon";
 
 export default function Sort(props) {
     const [showSortOptions, setShowSortOptions] = useState(false)

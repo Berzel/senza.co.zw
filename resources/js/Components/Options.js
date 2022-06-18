@@ -1,6 +1,6 @@
 import { ClickAwayListener } from "@mui/base"
 import { useState } from "react"
-import CloseIcon from "./CloseIcon"
+import CloseIcon from "./Icons/CloseIcon"
 
 export default function Options(props){
     const [open, setOpen] = useState(false)

@@ -1,12 +1,12 @@
 import { Head, Link } from "@inertiajs/inertia-react";
-import BackIcon from "../Components/BackIcon";
-import Filter from "../Components/Filter";
-import FilterIcon from "../Components/FilterIcon";
-import Options from "../Components/Options";
-import PlusIcon from "../Components/PlusIcon";
-import Sort from "../Components/Sort";
-import SortIcon from "../Components/SortIcon";
-import AppLayout from "../Layouts/AppLayout";
+import BackIcon from "../../Components/Icons/BackIcon";
+import Filter from "../../Components/Filter";
+import FilterIcon from "../../Components/Icons/FilterIcon";
+import Options from "../../Components/Options";
+import PlusIcon from "../../Components/Icons/PlusIcon";
+import Sort from "../../Components/Sort";
+import SortIcon from "../../Components/Icons/SortIcon";
+import AppLayout from "../../Layouts/AppLayout";
 
 function PageTitle(props) {
     return (
@@ -49,7 +49,7 @@ function MobileCategoryList(props) {
                     <ul className="flex items-center space-x-2">
                         { row.map(cat => (
                             <li key={cat}>
-                                <Link className="bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100 px-4 py-2 inline-block rounded-r-full rounded-l-full whitespace-nowrap">
+                                <Link className="bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100 px-4 py-2 inline-block rounded-r-full rounded-l-full whitespace-nowrap">
                                     {cat}
                                 </Link>
                             </li>
@@ -67,22 +67,22 @@ function DesktopCategoryList (props) {
             <li>
                 <ul className="flex justify-between">
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Accounting &amp; Finance <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Banking <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Cooking <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Accounting &amp; Finance <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
@@ -91,22 +91,22 @@ function DesktopCategoryList (props) {
             <li>
                 <ul className="flex justify-between">
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Agriculture &amp; Farming <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Accounting &amp; Finance <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Engineering <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Sports <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
@@ -115,22 +115,22 @@ function DesktopCategoryList (props) {
             <li>
                 <ul className="flex justify-between">
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Accounting &amp; Finance <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Banking <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Cooking <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Accounting &amp; Finance <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
@@ -139,22 +139,22 @@ function DesktopCategoryList (props) {
             <li>
                 <ul className="flex justify-between">
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Agriculture &amp; Farming <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Accounting &amp; Finance <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="block py-3 px-4 rounded-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
+                        <Link className="block py-3 px-4 rounded-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100">
                             Engineering <span className="hidden xl:inline-block">&mdash; <span className="text-sm font-medium">5436</span></span>
                         </Link>
                     </li>
                     <li className="w-[24%]">
-                        <Link className="flex items-center space-x-2 p-3 rounded-full rounded-l-full bg-sky-50 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100 viewAllBtn">
+                        <Link className="flex items-center space-x-2 p-3 rounded-full rounded-l-full bg-sky-100 hover:bg-gradient-to-r hover:from-pink-500 hover:to-pink-600 text-sky-600 hover:text-white hover:shadow-lg hover:font-semibold hover:shadow-pink-100 viewAllBtn">
                             <span className="h-6 w-6 flex items-center justify-center rounded-full bg-sky-600 text-white viewAllBtn_icon">
                                 <PlusIcon className="h-4 w-4  fill-current" />
                             </span>
@@ -182,7 +182,7 @@ function CategoryList(props) {
     )
 }
 
-export default function Jobs(props) {
+export default function Index(props) {
     return (
         <AppLayout>
             <Head title="All Jobs">
