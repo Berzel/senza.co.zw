@@ -13,7 +13,7 @@ export default function TitleInput({title, setTitle}) {
             <div className="flex items-center space-x-4 mt-2">
                 {
                     !focused ? (
-                        <button onClick={() => setFocused(true)} className={`${!focused ? 'block':'hidden'} font-radio text-3xl font-semibold text-gray-700 cursor-pointer`}>
+                        <button onClick={() => setFocused(true)} className={`${!focused ? 'block':'hidden'} font-radio text-lg md:text-xl lg:text-3xl font-semibold text-gray-700 cursor-pointer`}>
                             {title}
                         </button>
                     ) : (
@@ -23,7 +23,7 @@ export default function TitleInput({title, setTitle}) {
                             value={title}
                             onBlur={() => setFocused(false)}
                             onChange={e => setTitle(e.target.value)}
-                            className={`${focused ? 'block w-full':'hidden'} bg-transparent font-radio text-3xl font-semibold text-gray-700 outline-none border-none`}
+                            className={`${focused ? 'block w-full':'hidden'} bg-transparent font-radio text-lg md:text-xl lg:text-3xl font-semibold text-gray-700 outline-none border-none`}
                         />
                     )
                 }

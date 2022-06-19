@@ -35,8 +35,8 @@ export default function SalaryInput({salary, setSalary}) {
     }
 
     return (
-        <div className="flex items-center space-x-2">
-            <div className="h-12 w-12 bg-green-600 rounded-full">
+        <div className="flex items-start md:items-center space-x-2">
+            <div className="h-6 md:h-12 w-6 md:w-12 bg-green-600 rounded-full mt-0.5 md:mt-0">
 
             </div>
             <div>
@@ -66,8 +66,8 @@ export default function SalaryInput({salary, setSalary}) {
                             )
                         }
                     </div>
-                    <span className="mx-2  font-semibold">
-                        &mdash;
+                    <span className="mx-1 md:mx-2  font-semibold">
+                        -
                     </span>
                     <div className={`flex items-center relative ${showMaxSalaryOptions && 'z-10'}`}>
                         <button type="button" onClick={() => setShowMaxSalaryOptions(true)} className="text-gray-700 font-semibold hover:text-sky-600">

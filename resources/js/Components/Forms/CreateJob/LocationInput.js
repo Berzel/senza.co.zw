@@ -1,7 +1,7 @@
 export default function LocationInput({location, setLocation}) {
     return (
-        <div className="flex items-center space-x-2 basis-[50%] flex-shrink-0 mt-6">
-            <div className="h-12 w-12 bg-purple-600 rounded-full">
+        <div className="flex items-start md:items-center space-x-2 basis-[50%] flex-shrink-0 mt-6">
+            <div className="h-6 md:h-12 w-6 md:w-12 bg-purple-600 rounded-full mt-0.5 md:mt-0">
 
             </div>
             <div>
