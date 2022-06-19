@@ -5,7 +5,7 @@ export default function DescriptionInput({description, setDescription}) {
                 Description
             </h3>
             <p className=" text-sm mt-1 md:w-[80%] text-gray-400">
-                Make sure to include duties &amp; responsibilities, plus qualifications and any relavant information about your company.
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt excepturi non modi nesciunt consequuntur nam! Voluptas odit voluptate soluta omnis adipisci?
             </p>
             <textarea
                 value={description}

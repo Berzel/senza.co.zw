@@ -21,7 +21,11 @@ export default function Create() {
     const [salary, setSalary] = useState({min: 500, max: 900, period: 'Monthly'})
     const [experience, setExperience] = useState({min: 2, max: 5, period: 'Years'})
     const [contractType, setContractType] = useState('Full Time')
+    const [location, setLocation] = useState('Harare, ZW')
     const [description, setDescription] = useState('')
+    const [responsibilities, setResponsibilities] = useState(['', '', ''])
+    const [qualifications, setQualifications] = useState(['', '', ''])
+
     const [categories, setCategories] = useState([])
     const [company, setCompany] = useState('')
     const [tags, setTags] = useState([])
@@ -35,7 +39,7 @@ export default function Create() {
 
     function handleSubmit(e) {
         e.preventDefault()
-        console.log({title, salary, experience, contractType})
+        console.log({title, salary, experience, contractType, location, description, responsibilities, qualifications})
     }
 
     return (
@@ -140,12 +144,12 @@ export default function Create() {
                                     <ContractTypeInput contractType={contractType} setContractType={setContractType} />
                                 </div>
                                 <div className="basis-[50%] flex-shrink-0">
-                                    <LocationInput />
+                                    <LocationInput location={location} setLocation={setLocation} />
                                 </div>
                             </div>
                             <DescriptionInput description={description} setDescription={setDescription} />
-                            <ResponsibilitiesInput />
-                            <QualificationsInput />
+                            <ResponsibilitiesInput responsibilities={responsibilities} setResponsibilities={setResponsibilities} />
+                            <QualificationsInput qualifications={qualifications} setQualifications={setQualifications} />
                             <div className="border-t"></div>
                             <CategoriesInput categories={categories} setCategories={setCategories} />
                             <TagsInput tags={tags} setTags={setTags} />

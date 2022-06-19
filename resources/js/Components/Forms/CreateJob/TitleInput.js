@@ -17,7 +17,14 @@ export default function TitleInput({title, setTitle}) {
                             {title}
                         </button>
                     ) : (
-                        <input id="title" type="text" onBlur={() => setFocused(false)} value={title} onChange={e => setTitle(e.target.value)} className={`${focused ? 'block w-full':'hidden'} bg-transparent font-radio text-3xl font-semibold text-gray-700 outline-none border-none`} />
+                        <input
+                            id="title"
+                            type="text"
+                            value={title}
+                            onBlur={() => setFocused(false)}
+                            onChange={e => setTitle(e.target.value)}
+                            className={`${focused ? 'block w-full':'hidden'} bg-transparent font-radio text-3xl font-semibold text-gray-700 outline-none border-none`}
+                        />
                     )
                 }
 
