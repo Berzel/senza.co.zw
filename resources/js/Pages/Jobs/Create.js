@@ -131,7 +131,7 @@ export default function Create() {
                         </div>
                     </div>
                     <div className="lg:flex-grow md:px-4 md:pb-4 md:bg-white rounded-xl">
-                        <form action="#" className="block space-y-4 md:space-y-12 mt-4" onSubmit={handleSubmit}>
+                        <form action="#" className="block space-y-12 mt-4" onSubmit={handleSubmit}>
                             <TitleInput title={title} setTitle={setTitle} />
                             <div className="flex flex-wrap">
                                 <div className="basis-[50%] flex-shrink-0">

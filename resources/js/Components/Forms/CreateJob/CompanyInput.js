@@ -87,7 +87,7 @@ export default function CompanyInput({company, setCompany}) {
                         onChange={handleChange}
                         placeholder='Enter company name...'
                         onKeyDown={e => e.key === 'Enter' && e.preventDefault()}
-                        className={`block w-full px-3 py-4 outline-none rounded-2xl ${focused ? 'rounded-b-none border-b-transparent border-sky-600 border-opacity-50 bg-white': 'border-transparent bg-gray-50'} border-2  placeholder:text-gray-600 placeholder:text-opacity-50 text-gray-900 mt-2 md:mt-4`}
+                        className={`block w-full px-3 py-4 outline-none rounded-2xl ${focused ? 'rounded-b-none border-b-transparent border-sky-600 border-opacity-50 bg-white': 'border-transparent bg-gray-100 md:bg-gray-50'} border-2  placeholder:text-gray-600 placeholder:text-opacity-50 text-gray-900 mt-2 md:mt-4`}
                     />
 
                     {

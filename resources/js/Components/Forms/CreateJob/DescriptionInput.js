@@ -13,7 +13,7 @@ export default function DescriptionInput({description, setDescription}) {
                 id="description"
                 rows="10"
                 placeholder="Enter job description here..."
-                className="block w-full px-3 py-4 outline-none rounded-2xl bg-gray-50 border-2 border-transparent focus:border-sky-600 focus:border-opacity-50 placeholder:text-gray-600 placeholder:text-opacity-50 text-gray-900 mt-2 md:mt-4"
+                className="block w-full p-3 outline-none rounded-2xl bg-gray-100 md:bg-gray-50 border-2 border-transparent focus:border-sky-600 focus:border-opacity-50 placeholder:text-gray-600 placeholder:text-opacity-50 text-gray-900 mt-2 md:mt-4"
             />
         </label>
     )
