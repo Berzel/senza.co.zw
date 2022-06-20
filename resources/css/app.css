@@ -6,3 +6,7 @@
 .viewAllBtn:hover .viewAllBtn_icon {
     @apply bg-white text-pink-600;
 }
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
